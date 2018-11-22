@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HomePage } from '../../pages/home/home';
-
+import { RegisterPage } from "../../pages/register/register";
+import { TabsPage } from '../tabs/tabs';
 
 @IonicPage()
 @Component({
@@ -10,6 +11,8 @@ import { HomePage } from '../../pages/home/home';
 })
 export class LoginPage {
 
+  username:string;
+  password:string;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
@@ -18,7 +21,11 @@ export class LoginPage {
   }
 
   login(){
-    this.navCtrl.push(HomePage);
+    this.navCtrl.push(TabsPage);
+  }
+
+  register(){
+    this.navCtrl.push(RegisterPage);
   }
 
 }
